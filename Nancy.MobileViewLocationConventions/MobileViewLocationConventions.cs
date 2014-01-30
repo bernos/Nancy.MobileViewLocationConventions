@@ -48,7 +48,7 @@ namespace Nancy.Conventions
 
             var defaultRegex = "/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/";
 
-            var regex = ConfigurationManager.AppSettings["MobileUserAgentRegex"];
+            var regex = ConfigurationManager.AppSettings["Nancy.MobileViewLocationConventions.MobileUserAgentRegex"];
 
             if (string.IsNullOrEmpty(regex))
             {
