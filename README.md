@@ -1,5 +1,11 @@
 View location conventions for Nancy that add "-mobile" suffix to view names when request is from mobile devices
 
+# Installing
+
+Use Nuget, natch!
+
+	Install-Package Nancy.MobileViewLocationConventions
+
 # Usage
 
 Just set it up in your Bootstrapper
