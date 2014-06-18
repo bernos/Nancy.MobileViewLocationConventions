@@ -4,20 +4,23 @@ View location conventions for Nancy that add "-mobile" suffix to view names when
 
 Use Nuget, natch!
 
-	Install-Package Nancy.MobileViewLocationConventions
+```
+Install-Package Nancy.MobileViewLocationConventions
+```
 
 # Usage
 
 Just set it up in your Bootstrapper
 
-	:::c#
-	protected override void ConfigureConventions(global::Nancy.Conventions.NancyConventions nancyConventions)
-	{
-	    base.ConfigureConventions(nancyConventions);
+```csharp
+protected override void ConfigureConventions(global::Nancy.Conventions.NancyConventions nancyConventions)
+{
+    base.ConfigureConventions(nancyConventions);
 
-	    // Set up mobile view conventions
-	    Nancy.Conventions.MobileViewLocationConventions.Enable(nancyConventions);
-	}
+    // Set up mobile view conventions
+    Nancy.Conventions.MobileViewLocationConventions.Enable(nancyConventions);
+}
+```
 
 Your best bet will be to add the MobileViewLocationConventions _after_ all other conventions. This is because the mobile conventions actually proxy through to any existing conventions and add the '-mobile' suffix to the view names returned by your existing conventions.
 
@@ -31,5 +34,6 @@ For example, assuming you had a `~/Views/Home/Index.cshtml` simply create `~/Vie
 
 Currently, mobile detection is implemented by matching the incoming user agent header to a regex. The regex can be configured in your app.config file by adding and editing the following app setting
 
-	:::xml
-	<add key="Nancy.MobileViewLocationConventions.MobileUserAgentRegex" value="/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/" />
+```xml
+<add key="Nancy.MobileViewLocationConventions.MobileUserAgentRegex" value="/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/" />
+```
