@@ -6,10 +6,10 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <projectUrl>https://bitbucket.org/bernos/nancy.mobileviewlocationconventions</projectUrl>
+    <projectUrl>https://github.com/bernos/Nancy.MobileViewLocationConventions</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <!-- <releaseNotes>Summary of changes made in this release of the package.</releaseNotes> -->
+    <releaseNotes>Updated project url</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>Nancyfx</tags>
   </metadata>
